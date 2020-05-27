@@ -1,7 +1,6 @@
 import invariant from 'fbjs/lib/invariant'
 import idx from 'idx'
 import { applyDefaultProps } from './props'
-import * as components from '../components'
 
 /**
  * Available tag types
@@ -22,8 +21,6 @@ export const TYPES = {
   SimpleRope: 'SimpleRope',
 }
 
-const ELEMENTS = Object.keys(TYPES).reduce((elements, type) => ({ ...elements, [type]: components[type] }), {})
-
 /**
  * Inject types
  *
@@ -35,19 +32,17 @@ export const TYPES_INJECTED = {}
  * Create an element based on tag type
  * Similar to react-dom's `React.createElement()`
  *
- * @param {string} type Element type
+ * @param {Function} type Element type
  * @param {Object} props Component props
  * @param {Object} root Root instance
  * @returns {PIXI.*|undefined}
  */
 export function createElement(type, props = {}, root = null) {
-  const fn = ELEMENTS[type]
-
   let instance
   let applyProps
 
-  if (typeof fn === 'function') {
-    instance = fn(root, props)
+  if (typeof type === 'function') {
+    instance = type(root, props)
   }
 
   if (!instance) {
@@ -79,6 +74,7 @@ export function createElement(type, props = {}, root = null) {
  * @param {string} type
  * @param {Object} lifecycle methods
  */
+// TODO?
 export function PixiComponent(type, lifecycle) {
   invariant(!!type, 'Expect type to be defined, got `%s`', type)
   invariant(!TYPES[type], 'Component `%s` could not be created, already exists in default components.', type)

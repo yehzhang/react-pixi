@@ -10,6 +10,20 @@ import TilingSprite from './TilingSprite'
 import SimpleMesh from './SimpleMesh'
 import SimpleRope from './SimpleRope'
 
+// export {
+//   // BitmapText,
+//   Container,
+//   Graphics,
+//   // NineSlicePlane,
+//   ParticleContainer,
+//   Sprite,
+//   Text,
+//   // TilingSprite,
+//   // SimpleMesh,
+//   // SimpleRope,
+//   AnimatedSprite,
+// }
+
 export {
   BitmapText,
   Container,
