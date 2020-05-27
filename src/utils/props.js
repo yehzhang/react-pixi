@@ -1,7 +1,6 @@
 import isNil from 'lodash.isnil'
 import invariant from 'fbjs/lib/invariant'
-import { Texture } from '@pixi/core'
-import { DisplayObject } from '@pixi/display'
+import { Texture, DisplayObject } from 'pixi.js'
 import { eventHandlers, setValue } from './pixi'
 import { not, hasKey } from '../helpers'
 

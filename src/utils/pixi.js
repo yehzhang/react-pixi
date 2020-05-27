@@ -1,4 +1,4 @@
-import { Point, ObservablePoint } from '@pixi/math'
+import { Point, ObservablePoint } from 'pixi.js'
 import invariant from 'fbjs/lib/invariant'
 import idx from 'idx'
 import isNil from 'lodash.isnil'

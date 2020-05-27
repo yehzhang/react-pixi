@@ -1,4 +1,4 @@
-import { AnimatedSprite as PixiAnimatedSprite } from '@pixi/sprite-animated'
+import { AnimatedSprite as PixiAnimatedSprite } from 'pixi.js'
 import { getTextureFromProps, applyDefaultProps } from '../utils/props'
 
 const AnimatedSprite = (root, props) => {

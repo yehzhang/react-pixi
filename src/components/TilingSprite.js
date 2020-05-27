@@ -1,4 +1,4 @@
-import { TilingSprite as PixiTilingSprite } from '@pixi/sprite-tiling'
+import { TilingSprite as PixiTilingSprite } from 'pixi.js'
 import { getTextureFromProps, applyDefaultProps } from '../utils/props'
 import { parsePoint } from '../utils/pixi'
 
