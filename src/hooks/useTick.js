@@ -1,5 +1,5 @@
 import invariant from 'fbjs/lib/invariant'
-import { Application } from 'pixi.js'
+import { Application } from '@pixi/app'
 import React, { useEffect, useContext, useRef } from 'react'
 import { Context } from '../stage/provider'
 
